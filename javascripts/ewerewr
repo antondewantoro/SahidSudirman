@@ -1,0 +1,53 @@
+OBJECTS IN JAVASCRIPT
+ar person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+The typeof operator returns "object" for arrays because in JavaScript arrays are objects.
+You can consider it a bug in JavaScript that typeof null is an object. It should be null.
+typeof undefined             // undefined
+typeof null                  // object
+null === undefined           // false
+null == undefined            // true
+
+fullName	function() {return this.firstName + " " + this.lastName;}//USE OF THIS WITH RETURN
+ACCESSING OBJECT PROPERTIES-person["lastName"];  ALSO CAN DO, person.lastname
+JSON Syntax Rules
+Data is in name/value pairs
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+NAME-VAUE PAIR: "firstname":"john"
+to convert json to javacsipt
+var text= '{employees[{"firstName":"John" , "lastName":"Doe"},{"firstName":"John" , "lastName":"Doe"},{"firstName":"John" , "lastName":"Doe"}]}';
+var obj-JSON.parde(text);
+retreival-obj.employees[1].firstName + " " + obj.employees[1].lastName;
+datatypes
+The data type of NaN is number
+The data type of an array is object
+The data type of a date is object
+The data type of null is object
+ The data type of an undefined variable is undefined *
+ The data type of a variable that has not been assigned a value is also undefined *
+ TO CREATE ARRAYS
+ 1. var t1=['fghtr','gthh','teheh',];
+ 2. var t1= new array('grege','rgr','gerg');
+ You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+ typeof returns "object: for arrays
+ to add a new element to an array-fruits.push("Lemon"); 
+ fruits[fruits.length] = "Lemon";
+ NOTE
+ -Many programming languages support arrays with named indexes.
+
+Arrays with named indexes are called associative arrays (or hashes).
+
+JavaScript does not support arrays with named indexes.
+
+In JavaScript, arrays always use numbered indexes. 
+The Difference Between Arrays and Objects
+In JavaScript, arrays use numbered indexes.  
+
+In JavaScript, objects use named indexes
+to check if it is an array-Array.isArray(fruits);     // returns true
+you can create your own isArray() function:
+
+function isArray(x) {
+    return x.constructor.toString().indexOf("Array") > -1;
+}
